@@ -145,17 +145,17 @@ var Toolbar = (function ToolbarClosure() {
         eventBus.dispatch('presentationmode');
       });
 
-      items.openFile.addEventListener('click', function (e) {
-        eventBus.dispatch('openfile');
-      });
+      // items.openFile.addEventListener('click', function (e) {
+      //   eventBus.dispatch('openfile');
+      // });
 
-      items.print.addEventListener('click', function (e) {
-        eventBus.dispatch('print');
-      });
+      // items.print.addEventListener('click', function (e) {
+      //   eventBus.dispatch('print');
+      // });
 
-      items.download.addEventListener('click', function (e) {
-        eventBus.dispatch('download');
-      });
+      // items.download.addEventListener('click', function (e) {
+      //   eventBus.dispatch('download');
+      // });
 
       // Suppress context menus for some controls
       items.scaleSelect.oncontextmenu = noContextMenuHandler;

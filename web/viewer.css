@@ -1326,14 +1326,15 @@ html[dir='rtl'] .outlineItemToggler::before {
 ::-moz-selection { background: rgba(0,0,255,0.3); }
 
 #errorWrapper {
-  background: none repeat scroll 0 0 #FF5555;
+  /* background: none repeat scroll 0 0 #FF5555;
   color: white;
   left: 0;
   position: absolute;
   right: 0;
   z-index: 1000;
   padding: 3px;
-  font-size: 0.8em;
+  font-size: 0.8em; */
+  display: none;
 }
 .loadingInProgress #errorWrapper {
   top: 37px;
