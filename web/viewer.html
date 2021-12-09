@@ -66,7 +66,23 @@ See https://github.com/adobe-type-tools/cmap-resources
 <!--#else-->
 <!--#include viewer-snippet-minified.html-->
 <!--#endif-->
+    <script>
+      if (window.addEventListener) {
+          // For standards-compliant web browsers
+          window.addEventListener("message", handleMessage, false);
+      }else{
+          window.attachEvent("onmessage", handleMessage);
+      }
 
+      function handleMessage(evt){
+        var raw = atob(evt.data);
+        var uint8Array = new Uint8Array(raw.length);
+        for (var i = 0; i < raw.length; i++) {
+          uint8Array[i] = raw.charCodeAt(i);
+        }
+        PDFViewerApplication.open(uint8Array);
+      }
+    </script>
   </head>
 
   <body tabindex="1" class="loadingInProgress">
